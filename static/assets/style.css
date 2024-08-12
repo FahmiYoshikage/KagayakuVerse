@@ -1,0 +1,1069 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Lobster&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* impor playfair font dari google font untuk di bagian aside */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/*  menghilangkan spinner angka di input type number untuk sebagian banyak browser */
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@font-face {
+    font-family: BARABARA-FINAL;
+    src: url('../fonts/BARABARAFINALRegular.woff2') format('woff2'),
+        url('../fonts/BARABARAFINALRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root{
+    --primary-background-color: #280031;
+    --color-dark-main: #32103a;
+    --color-light-main: #eae8f7;
+    --color-light-1: #f9f9f9;
+    --color-light-2: #dfdaff;
+    --color-light-3: #cac5e8;
+    --color-light-4: #b9aec5;
+    --color-light-5: #897493;
+    --color-light-6: #583a63;
+    --color-light-7: #efe9ff;
+    --color-secondary-main: #e8f953;
+    --color-primary-main: #6242fc;
+    --color-primary-5: #4129b5;
+    --color-primary-4: #4e31da;
+    --color-primary-1: #7f60fe;
+    --border-color: #B9AEC5;
+    --font-color: #05052E;
+    --background-color: rgb(94, 83, 83);
+    --font-harga-color: rgb(248, 98, 98);
+    --outline-width: 0px;
+    --color-cute-main: #FFC0CB;
+}
+
+body{
+    /* background-image: url("../../static/images/wallpaper\ biru.jpg"); */
+    background-color: var(--primary-background-color);
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    object-position: center;
+}
+.navbar{
+    width: 100%;
+    background-color: var(--color-dark-main);
+    height: 92px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    box-shadow: 0 1px 1px #796d6d;
+}
+.content-navbar{
+    padding-right: 50px;
+}
+
+ul, li a{
+    display: flex;
+    color: var(--color-secondary-main);
+    font-size: 30px;
+    text-decoration: none;
+    list-style: none;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+ul li a:hover{
+    color: var(--color-cute-main);
+    display: block;
+    border-bottom: solid 0.5px var(--color-cute-main);
+}
+
+ul li a::after{
+    transform: scaleX(20deg);
+}
+.active{
+    border-bottom: solid 0.5px var(--color-secondary-main);
+    /* text-decoration: underline 2px rgb(236, 236, 101); */
+}
+.reseller:hover{
+    background-color: rgb(94, 83, 83);
+    border-radius: 10px;
+    /* width: 120px;
+    height: 60px; */
+    width: auto;
+    height: auto; 
+    margin-top: 10px;
+}
+.about-me:hover{
+    background-color: rgb(94, 83, 83);
+    border-radius: 10px;
+    /* width: 170px; */
+    /* height: 60px; */
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+}
+.logo{
+    color: pink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    margin-top: 10px;
+}
+/* navbar end */
+
+#content{
+    margin-top: 10px;
+    padding: 25px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#content-in-content{
+    margin-top: 100px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* align-items: ; */
+}
+
+aside{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 450px;
+    font-size: 19px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: var(--color-light-main);
+}   
+
+.main-content{
+    margin-left: -150px;
+}
+
+
+
+.sub-judul, .sub-judul-first{
+    font: bold;
+    color: white;
+    font-family: BARABARA-FINAL;
+    font-size: 25px;
+}
+
+.sub-judul{
+    margin-top: 100px;
+}
+
+.pulsa-isi{
+    display: flex;
+    gap: 50px;
+}
+
+.pulsa-universal{
+    width: 90px;
+    background-color: azure;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: -2px;
+    transition: 300ms;
+}
+.pulsa-universal:hover{
+    transform: translateY(-15px); 
+    box-shadow: 12px 12px 1px #FED9ED;
+}
+.logo-xl{
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: auto;
+    /* margin-top: 10px;
+    margin-left: 20%; */
+}
+
+.judul-xl {
+    color: rgba(20, 5, 5, 0.932);
+    font-size: 20px;
+    margin-top: 25px;
+    /* margin-left: 7px; */
+    font-family: 'Bree Serif', serif;
+}
+
+.judul-telkom, .judul-xl, a{
+    text-decoration: none ;
+}
+
+.logo-telkom{
+    width: 85px;
+    height: 85px;
+    display: block;
+    margin: auto;
+}
+
+.judul-telkom{
+    color: rgba(20, 5, 5, 0.932);
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: 'Bree Serif', serif;
+}
+
+.angka{
+    background-color: rgb(119, 119, 173);
+    border: 5px solid white;
+    width: 35px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: aliceblue;
+} 
+
+
+fieldset{
+    background-color: var(--color-light-main);
+    border: white;
+    border-radius: 10px;
+    margin-left: 150px;
+    height: auto;
+    width: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 870px;
+}
+
+.syarat-ML{
+    display: flex;
+    gap: 20px;
+    caret-color: transparent;
+}
+
+.syarat {
+    color: #05052e;
+    overflow: hidden;
+    width: 870px;
+}
+
+.syarat-judul{
+    color: #05052e;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+
+#nomor-hp{
+    display: flex;
+    flex-flow: wrap;
+    text-align: center;
+    border: var(--border-color) 3px solid;
+    color: rgba(1, 1, 1, 0.7);
+    font-size: large;
+    font: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-light-main);
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 47px;
+}
+
+.harga{
+    color: #05052e;
+    width: 870px;
+    height: auto;
+    background-color: var(--color-light-main);
+    border: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.border-pulsa{
+    border: 2px solid var(--border-color);
+    width: 120px;
+    height: 150px;
+    margin-left: 5px;
+    border-radius: 20px;
+    transition: border-color 0.3s;
+}
+
+.product-list-activate{
+    border-color: #8E7A9E;
+    background-color: var(--color-light-3);
+}
+
+.border-pulsa, .border-special-items, .nominal-pulsa, object:hover{
+    cursor: pointer;
+}
+
+.nominal-pulsa{
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.harga-pulsa{
+    display: flex;
+    justify-content: center;
+    color: var(--font-harga-color);
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+object{
+    margin-left: 20px;
+    margin-top: 7px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.tombol-order {
+    background-color: #519f10;
+    border-radius: 20px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 150px;
+    height: 60px;
+}
+
+.p-text{
+    color: var(--font-color);
+}
+
+.container-footer{
+    background-color: var(--navbar-color);
+    width: 100%;
+    height: 2rem;
+    font-size: medium;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tab-icon-browser{
+    width: max-content;
+    height: max-content;
+}
+
+.logo-game{
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+
+#idML, #serverML{
+    display: flex;
+    flex-flow: wrap;
+    text-align: center;
+    border: var(--border-color) 3px solid;
+    color: rgba(1, 1, 1, 0.7);
+    font-size: large;
+    font: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-light-main);
+}
+
+#email-type{
+    display: flex;
+    flex-flow: wrap;
+    text-align: center;
+    border: var(--border-color) 3px solid;
+    color: rgba(1, 1, 1, 0.7);
+    font-size: large;
+    font: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 20px;
+    width: 300px;
+    height: 50px;
+    background-color: var(--color-light-main);
+}
+
+.aside-banner{
+    border-radius: 20px;
+}
+
+.playfair-display-aside {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.tooltip {
+    font-weight: 900;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--color-dark-main);
+    color: var(--color-light-main);
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.tooltip-image {
+    display: none;
+    position: absolute;
+    top: -1px;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 10px; /* Adjust the spacing between the tooltip and the image */
+    width: 400px; /* Adjust the width as needed */
+    z-index: 1;
+}
+
+.tooltip-container:hover .tooltip-image {
+    display: block;
+}
+
+.tooltip-image img {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.tooltip-image-long img{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.tooltip-image-long{
+    display: none;
+    position: absolute;
+    /* top: -1px; */
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 10px; /* Adjust the spacing between the tooltip and the image */
+    width: 400px; /* Adjust the width as needed */
+    z-index: 1;
+}
+
+.tooltip-container:hover .tooltip-image-long{
+    display: block;
+}
+
+.syarat-caption-MLBB{
+    margin-top: 40px;
+    font-size: .6875rem;
+    width: 200px;
+    word-wrap: break-word;
+    color: var(--color-light-5);
+}
+
+.special-items{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.special-items-text{
+    font-family: 'Anton';
+    font-size: 20px;
+    color: var(--font-color);
+}
+
+.border-special-items{
+    border: 2px solid var(--border-color);
+    width: max-content;
+    height: 150px;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+.border-genshin-exclusive{
+    border: 2px solid var(--border-color);
+    width: max-content;
+    height: 150px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-genshin-exclusive{
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    gap: 40px;
+}
+
+.card-genshin-exclusive .border-genshin-exclusive-lil{
+    border: 2px solid var(--border-color);
+    width: max-content;
+    height: 150px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.pulsa-isi-next-page{
+    padding-top: 25px;
+}
+
+.card-hok-exclusive{
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 47px;
+}
+
+.payment-method-parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.payment-method-child{
+    width: 430px;
+    height: 100px;
+    border: 2px solid #796d6d;
+    border-radius: 10px;
+    display: 0 0 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-method-child-2{
+    display: flex;
+}
+
+.payment-method-icon{
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.payment-method-child-description{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.payment-method-child-price-discount{
+    margin-right: 10px;
+    text-decoration: line-through;
+    display: flex;
+    justify-content: center;
+    color: var(--font-harga-color);
+    /* padding-top: 10px; */
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.payment-method-child-price-after-discount{
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    color: var(--font-harga-color);
+    padding-top: 10px;  
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: -20px;
+}
+
+#buying-email{
+    display: flex;
+    flex-flow: wrap;
+    padding-left: 30px;
+    border: var(--border-color) 3px solid;
+    color: rgba(1, 1, 1, 0.7);
+    font-size: large;
+    font: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 10px;
+    width: 800px;
+    height: 50px;
+    background-color: var(--color-light-main);
+}
+
+.normal-plaintext{
+    color: var(--font-color);
+    font-weight: 300;
+    font-size: medium;
+}
+
+.bigger-plaintext{
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.little-plaintext-information{
+    font-size: .6875rem;
+    width: 200px;
+    word-wrap: break-word;
+    color: var(--color-primary-4);
+}
+
+.button-buy{
+    width: 250px;
+    height: 45px;
+    background-color: var(--color-primary-main);
+    font-family: fantasy;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 230px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button-buy a{
+    color: var(--color-light-main);
+    width: max-content;
+    height: max-content;
+}
+
+.button-buy:hover{
+    background-color: var(--color-primary-5);
+}
+
+.cheering-up-to-buy-gif{
+    border-radius: 20px;
+    width: max-content; 
+    margin-right: 30px; 
+    margin-bottom: 20px; 
+    height: 100px;
+    position: static;
+}
+
+.update-information-parent{
+    display: flex;
+    margin-top: 1rem;
+}
+
+#update-information{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid var(--color-primary-1);
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--color-light-main);
+    cursor: pointer;
+    position: relative;
+}
+
+#update-information:checked{
+    background-color: var(--color-secondary-main); /* Warna dalam saat dicentang */
+    border-color: #4CAF50; /* Warna border saat dicentang */
+}
+
+#update-information:checked::before{
+    content: "✓";
+    color: var(--font-color);
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.advice-to-get-invoice{
+    font-size: 20px;
+    color: var(--font-color);
+}
+
+.main-slider-home {
+    max-width: 1000px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.every-slide{
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+
+.every-slide img{
+    border-radius: 10px;
+    height: 400px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+
+.main-reseller-content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.section-main-reseller {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-light-main);
+    margin-top: 120px;
+    border-radius: 10px;
+    display:flex ;
+    align-items: center;
+
+}
+
+.section-main-reseller-left{
+    margin-left: 120px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 600px;
+}
+
+.section-main-reseller-left-title{
+    font-family: BARABARA-FINAL;
+    color: var(--color-light-6);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.section-main-reseller-left-caption{
+    color: var(--font-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 400px;
+}
+
+.section-main-reseller-right{
+    margin-right: 150px;
+    margin-top: -30px;
+}
+
+.section-second-reseller{
+    margin: auto;
+    margin-top: 30px;
+    background-color: var(--color-light-main);
+    width: 85%;
+    height: max-content ;
+    border-radius: 10px;
+    display: block;
+}
+
+.section-second-reseller-title{
+    padding-top: 20px;
+    color: var(--color-light-6);
+}
+
+.section-second-reseller-image-content{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.section-second-reseller-image-content img{
+    margin-left: 25px;
+}
+
+.section-second-reseller-text-content-description{
+    word-wrap: break-word;  
+    overflow-wrap: break-word;
+    width: 200px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.section-second-reseller-text-content-title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.section-third-reseller{
+    background-color: var(--color-light-main);
+    width: 85%;
+    height: max-content;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section-third-reseller-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-third-reseller-content-left{
+    display: flex;
+    align-items: center;
+}
+
+.section-third-reseller-content-left-text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--font-color);
+}
+
+.section-third-reseller-content-left-text-title{
+    font-weight: bold;
+    font-size: large;
+}
+
+.section-third-reseller-content-left-text-description{
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.button-hubungi-kami{
+    width: 200px;
+    height: 40px;
+    color: var(--color-light-main);
+    background-color: var(--color-dark-main);
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: none;
+    border: 1px solid var(--color-dark-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.button-hubungi-kami:hover{
+    background-color: var(--color-light-main);
+    color: var(--color-dark-main);
+}
+
+.section-forth-reseller{
+    background-color: var(--color-light-main);
+    width: 85%;
+    height: max-content;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section-forth-reseller-icon-list{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-forth-reseller-icon-list img{
+    border-radius: 10px;
+}
+
+.section-forth-reseller-title{
+    font-weight: bold;
+    font-size: large;
+}
+
+.section-forth-reseller-description{
+    font-weight: 300;
+    font-size: 15px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.section-final-reseller{
+    margin: auto;
+    margin-top: 30px;
+    background-color: var(--color-light-main);
+    width: 85%;
+    height: max-content ;
+    border-radius: 10px;
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.section-final-reseller-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-final-reseller-content-text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--font-color);
+}
+
+.section-final-reseller-content-text-title{
+    font-weight: bold;
+    font-size: large;
+}
+
+.section-final-reseller-content-text-description{
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.button-daftar-sekarang{
+    width: 200px;
+    height: 40px;
+    color: var(--color-primary-4);
+    /* background-color: var(--color-dark-main); */
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: none;
+    border: 1px solid var(--color-primary-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.button-daftar-sekarang:hover{
+    background-color: var(--color-primary-4);
+    color: var(--color-light-main);
+}
+
+.main-container-contact{
+    background-color: var(--color-light-main);
+}
+
+
+.contact-container {
+    background-color: white;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 150px;
+    margin-left: 12.5%;
+}
+.contact-info {
+    background-color: #e74c3c;
+    padding: 40px;
+    color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-info h2 {
+    margin: 0 0 20px;
+    font-weight: 600;
+}
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.contact-info p i {
+    margin-right: 10px;
+}
+.contact-form {
+    padding: 40px;
+    width: 60%;
+}
+.contact-form h2 {
+    margin: 0 0 20px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+.contact-form p {
+    color: #95a5a6;
+    margin-bottom: 20px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.contact-form button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+.contact-form button:hover {
+    background-color: #c0392b;
+}
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+    .contact-info {
+        text-align: center;
+    }
+}
